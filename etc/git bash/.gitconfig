@@ -1,0 +1,18 @@
+[user]
+	name = Timothy Tseng
+	email = timothy.tseng@tno.nl
+[http]
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[core]
+	autocrlf = true
+[gui]
+	recentrepo = C:/Development/Workspace/cpt_ip
+[gc]
+	autoDetach = false
+[alias]
+	unstage = reset HEAD --
+	hist = log --pretty=format:\"%Cred%h%Creset %Cgreen%cr%Creset | %s%d [%Cblue%an%Creset]\" --graph --date=short --topo-order
+	log = log --name-only

@@ -1,0 +1,166 @@
+
+# [dommainname, hostname, uname]
+
+ unalias -a
+
+ hn=/bin/hostname
+ un=/usr/bin/uname
+
+ alias a="alias"
+
+ aliasEd=vi
+ export aliasFile="~/.alias_sh"
+ export envFile="~/.environment_sh"
+
+ a mv="/usr/bin/mv -n"
+ a mvo="/usr/bin/mv -f"
+
+ a sa=". $aliasFile"
+ a va="$aliasEd $aliasFile"
+ a se=". $envFile"
+ a ve="$aliasEd $envFile"
+ 
+ a grep="/usr/bin/grep -E --directories=skip"
+
+ a ls="ls --color=auto"
+
+ a rdf="rm -rf"
+ a md="mkdir -p"
+ a lo="exit"
+
+ a pd='pushd'
+ a po='popd'
+ a pdb='pushd -0'
+ a pdf='pushd +1'
+ a pd2='pushd +2'
+ a pd3='pushd +3'
+ a cdo='cd $OLDPWD'
+ a pdo='pushd $OLDPWD'
+ a dirs='dirs -v'
+
+# Work 
+
+ gr () { grep -H -r -- "$1"; }
+ grl () { grep -lH -r -- "$1"; }
+ gri () { grep -Hi -r -- "$1"; }
+ grli () { grep -li -r -- "$1"; }
+
+ fn () { find . -iname "$1"; }
+ fne () { grep -H -rE --include="$1" "$2"; } 
+ fnel () { grep -l -r --include="$1" "$2"; } 
+ fneli () { grep -li -r --include="$1" "$2"; }
+
+ a wdiff='diff -ydBbwW 200'
+
+# Git!
+
+# git: Often
+ git=/mingw64/bin/git
+ a gk='gitk --all &'
+ a gh='$git hist | head -10'
+ a gad='$git add'
+ a gbr='$git branch'
+ a gnr='$git name-rev --name-only HEAD'
+ a gch='$git checkout'
+ a gcp='$git cherry-pick'
+ a gcpc='$git cherry-pick --continue'
+ a gcpx='$git cherry-pick -x'
+ a gco='$git commit'
+ a gcm='$git commit -m'
+ a gcoa='$git commit --amend'
+ a gcoah='$git commit --amend -C HEAD'
+ a gdi='$git diff'
+ a gdiC='$git diff --cached'
+ a gdic='$git diff -w --cached'
+ a gdiw='$git diff -w'
+ a glos='$git log --stat=300,300'
+ a glop='$git whatchanged -p -w'
+ a gloP='$git whatchanged -p'
+ a grem='$git remote'
+ a gu='$git remote update -p'
+ a grm='$git rm'
+ a gs='$git status'
+ a gss='$git status -s'
+ a gssd='$git status -s | grep -E "^[^? ][^? ]" | cut -c4- '
+ a gssc='$git status -s . | cut -c4-'
+ a gsb='$git status -bs'
+ a gvsm='gvim `$git status -s | grep "^[^? ][^? ]" | cut -c4- `';
+ a gun='$git unstage'
+ a grp='$git rev-parse'
+
+# git stash
+ a gsth='$git stash'
+ a gshl='$git stash list'
+
+# git: less often
+ a gadi='$git add --interactive'
+
+ a gfe='$git fetch'
+ a gmef='$git merge --ff'
+ a gpu='$git push'
+
+ a greb='$git rebase'
+ a grebc='$git rebase --continue'
+ a greba='$git rebase --abort'
+ a grhh='$git reset --hard HEAD^1'
+ a grsh='$git reset --soft HEAD^1'
+ a gshos='$git show --stat=300,300'
+ a gsho='$git show --ws-error-highlight=all'
+ a gshow='$git show -w'
+ a gta='$git tag'
+ a gun='$git unstage'
+ a gbl='$git blame -W -M -C'
+
+# mave
+
+ a mvn='mvn -T2C'
+ a mci='mvn clean install -DskipTests -DskipITs -ff'
+ a mciu='mvn -U clean install -DskipTests -Dfull'
+ a mcin='mvn -N clean install -DskipTests'
+ a mcit='mvn clean install -ff'
+ a mcic='mvn clean install -ff cobertura:cobertura'
+ a mcitu='mvn -U clean install -ff'
+ a mctc='mvn clean test-compile'
+
+ a mda='mvn -N dependency:analyze | grep -v :test'
+ a mdat='mvn -N dependency:analyze'
+ a mdt='mvn -N dependency:tree | grep -v :test'
+ a mdl='mvn -N dependency:list'
+ a mdtt='mvn -N dependency:tree'
+ a mep='mvn help:effective-pom'
+
+# other development
+
+ a dbeaver='/usr/bin/beaver &> /tmp/dbeaver.log &'
+
+# other 
+
+ a wget='/usr/bin/axel -a'
+ a temp='/usr/bin/sensors | grep ^Core | cut -d\( -f1'
+
+# USE ME!
+ 
+
+ a pd4='pushd +4'
+ a pd5='pushd +5'
+
+ a docbookrx=/home/mrietvel/Workspace/references/docbookrx/bin/docbookrx
+ a luki="/home/mrietvel/bin/luke -index"
+ a rake="/home/mrietvel/.gem/ruby/2.3.0/bin/rake"
+
+## Docbook -> AsciiDoc
+
+# UNUSED? 
+
+ a glo='$git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
+
+# unset
+
+ unset dn
+ unset hn
+ unset un
+ unset aliasEd
+ unset aliasFile
+ unset envFile
+
+

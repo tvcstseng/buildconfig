@@ -1,0 +1,70 @@
+
+# Environment # [domainname, hostname, arch]
+# [arch, domainname, hostname]
+ umask 023
+
+ set +o noclobber
+
+ export IGNOREEOF=1
+ set -b
+ set +o nounset
+ set -o monitor
+ set +o physical
+ set -o vi
+
+# BASH extras
+
+ shopt -s autocd
+ shopt -s cdable_vars 
+ 
+ shopt -s checkjobs
+
+ shopt -s dotglob
+ shopt -u nocaseglob
+ shopt -s globstar
+
+ shopt -s force_fignore
+ shopt -s gnu_errfmt
+ shopt -s shift_verbose
+
+ shopt -s histappend
+ shopt -u histreedit
+ shopt -s histverify
+
+ shopt -s huponexit
+
+ shopt -u no_empty_cmd_completion
+
+ shopt -s checkwinsize
+
+# geschiedenis
+
+ export HISTSIZE=5000 
+ #unset HISTFILESIZE
+ #d=`date '+%y%m%d-%H%M%S'`
+ export HISTFILE="~/.history"
+ export HISTCONTROL=erasedups:ignoreboth
+
+ export HISTIGNORE="pd *:po:did*:&:#*:[ ]*:exit:kill*:history*"
+ export HISTTIMEFORMAT="%a %d %H:%M:%S "
+
+# OTHER
+
+ export EDITOR=vi
+ export VISUAL=vi
+ export PAGER=less
+ export TEXEDIT="vi +%d %s"
+
+ export GZIP="-9v --name"
+ export LESS="-R -S -j.25"
+ export UNZIP="-qq -^"
+
+#export VERBOSE
+
+ export LYNX_CFG="~/.lynx_cfg"
+
+ export UNZIp=-q;
+
+####
+
+ export MAVEN_OPTS="-Dmaven.wagon.provider.http=httpclient -Dmaven.artifact.threads=12 -Dhttp.tcp.nodelay=false -Dhttp.maxDirects=2 -Xshare:auto -Xmx2048M -Xss256M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:-UseGCOverheadLimit"

@@ -42,6 +42,5 @@
         <url>https://github.com/tvcstseng/buildconfig.git</url>
         <connection>scm:git:https://tvcstseng@github.com/buildconfig.git</connection>
         <developerConnection>scm:git:https://tvcstseng@github.com/buildconfig.git</developerConnection>
-      <tag>build-config-0.0.1</tag>
   </scm>
 </project>

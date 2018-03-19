@@ -1,4 +1,4 @@
-Copyright 2012-2014 TNO Geologische Dienst Nederland
+Copyright 2012-2018 TNO Geologische Dienst Nederland
  
 Alle rechten voorbehouden.
 Niets uit deze software mag worden vermenigvuldigd en/of openbaar gemaakt door middel van druk, fotokopie, 

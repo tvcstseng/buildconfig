@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
     <version>0.0.1</version>
 
-    <name>COM - TTSTUDIOS - BUILD - CONFIGURATION</name>
+    <name>COM - TTSTUDIOS - BUILD CONFIGURATION</name>
 
     <properties>
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
